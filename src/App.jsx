@@ -512,6 +512,16 @@ async function saveUserData(userId, cards, prog) {
     .upsert({ id: userId, cards, prog }, { onConflict: 'id' });
 }
 
+async function saveProgressOnly(userId, prog) {
+  if (CLAUDE_MODE) {
+    try { localStorage.setItem(LS_KEY, JSON.stringify({ prog })); } catch {}
+    return;
+  }
+  await sb()
+    .from('user_data')
+    .upsert({ id: userId, prog }, { onConflict: 'id' });
+}
+
 // ─── helpers ──────────────────────────────────────────────────────────────────
 function shuffle(arr) {
   const a = [...arr];
@@ -858,7 +868,7 @@ export default function AWSQuiz() {
   const saveProg = async (p) => {
     setProgress(p);
     if (CLAUDE_MODE) { try { localStorage.setItem(LS_KEY, JSON.stringify({ prog: p })); } catch {} return; }
-    if (user) await saveUserData(user.id, cardsRef.current, p);
+    if (user) await saveProgressOnly(user.id, p);
   };
 
   // ── Session timer ─────────────────────────────────────────────────────────
