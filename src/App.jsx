@@ -1197,21 +1197,16 @@ ${rawQ}`
         .choice-btn.dimmed { opacity: 0.25; }
         input:focus, textarea:focus, select:focus { outline: none; border-color: rgba(74,222,128,0.45) !important; }
         ::-webkit-scrollbar { width: 4px; } ::-webkit-scrollbar-track { background: transparent; } ::-webkit-scrollbar-thumb { background: rgba(74,222,128,0.2); border-radius: 2px; }
+        .q-text { font-size: clamp(15px, 1.5vw, 18px) !important; }
+        .choice-btn { font-size: clamp(13px, 1.3vw, 16px) !important; }
+        .exp-text { font-size: clamp(13px, 1.2vw, 15px) !important; }
+        .bcard-text { font-size: clamp(13px, 1.2vw, 15px) !important; }
         @media (max-width: 600px) {
-          .q-text { font-size: 17px !important; }
-          .choice-btn { font-size: 15px !important; padding: 12px 13px !important; }
-          .exp-text { font-size: 15px !important; }
-          .bcard-text { font-size: 15px !important; }
-        }
-        @media (min-width: 860px) {
-          .q-text { font-size: 16px !important; }
-          .choice-btn { font-size: 15px !important; }
-          .exp-text { font-size: 14px !important; }
-          .bcard-text { font-size: 14px !important; }
+          .choice-btn { padding: 12px 13px !important; }
         }
       `}</style>
 
-      <div style={{ maxWidth: 860, margin: '0 auto' }}>
+      <div style={{ maxWidth: 'min(92vw, 1100px)', margin: '0 auto' }}>
 
         {/* ── Header ── */}
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '1.25rem', flexWrap: 'wrap', gap: 8 }}>
