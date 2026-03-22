@@ -642,11 +642,11 @@ function FormatQuestion({ text, txt, txt2, ylw }) {
   return (
     <div>
       {scenario && (
-        <div style={{ fontSize: 'clamp(14px, 1.4vw, 18px)', lineHeight: 1.7, color: '#ccc9be', marginBottom: 12, opacity: 0.8 }}>
+        <div style={{ fontSize: '1rem', lineHeight: 1.7, color: '#ccc9be', marginBottom: 12, opacity: 0.8 }}>
           {scenario}
         </div>
       )}
-      <div style={{ fontSize: 'clamp(14px, 1.6vw, 20px)', lineHeight: 1.7, color: '#ccc9be', fontWeight: 400 }}>
+      <div style={{ fontSize: '1.05rem', lineHeight: 1.7, color: '#ccc9be', fontWeight: 400 }}>
         {questionClean}
         {selectMatch && (
           <span style={{
@@ -694,14 +694,14 @@ function MissedCard({ card, bg2, bg3, bdr, txt, txt2, txt3, grn, red, ylw, pur, 
             );
           })}
           {combined && (
-            <div style={{ marginTop: 10, fontSize: 'clamp(13px, 1.2vw, 16px)', color: '#ccc9be', lineHeight: 1.65, borderTop: `1px solid rgba(255,255,255,0.05)`, paddingTop: 10 }}>
-              <div style={{ fontSize: 'clamp(9px, 0.85vw, 12px)', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.07em', color: grn, marginBottom: 5 }}>Explanation</div>
+            <div style={{ marginTop: 10, fontSize: '0.9rem', color: '#ccc9be', lineHeight: 1.65, borderTop: `1px solid rgba(255,255,255,0.05)`, paddingTop: 10 }}>
+              <div style={{ fontSize: '0.65rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.07em', color: grn, marginBottom: 5 }}>Explanation</div>
               <FormatText text={combined} field="text" />
             </div>
           )}
           {card.keywords && (
-            <div style={{ marginTop: 8, fontSize: 'clamp(13px, 1.2vw, 16px)', color: '#ccc9be', lineHeight: 1.65 }}>
-              <div style={{ fontSize: 'clamp(9px, 0.85vw, 12px)', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.07em', color: ylw, marginBottom: 5 }}>🎯 Keywords</div>
+            <div style={{ marginTop: 8, fontSize: '0.9rem', color: '#ccc9be', lineHeight: 1.65 }}>
+              <div style={{ fontSize: '0.65rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.07em', color: ylw, marginBottom: 5 }}>🎯 Keywords</div>
               <FormatText text={card.keywords} field="keywords" />
             </div>
           )}
@@ -759,7 +759,7 @@ function BrowseCard({ card, hits, onDelete, onReset }) {
             ...(card.keywords ? [{ label: '🎯 Exam keywords', text: card.keywords, color: '#fbbf24' }] : []),
           ].filter(r => r.text).map((row, i) => (
             <div key={i} style={{ padding: '10px 14px', borderBottom: '1px solid rgba(255,255,255,0.05)' }}>
-              <div style={{ fontSize: 'clamp(9px, 0.85vw, 12px)', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.07em', color: row.color, marginBottom: 5 }}>{row.label}</div>
+              <div style={{ fontSize: '0.65rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.07em', color: row.color, marginBottom: 5 }}>{row.label}</div>
               <div className="bcard-text" style={{ lineHeight: 1.65, color: '#c8c6bc' }}>{row.isQuestion ? <FormatQuestion text={row.text} txt={'#e4e8dc'} txt2={'#8a9e86'} ylw={'#fbbf24'} /> : <FormatText text={row.text} field={row.label === '🎯 Exam keywords' ? 'keywords' : row.label === 'The trap' ? 'trap' : 'text'} />}</div>
             </div>
           ))}
@@ -1199,11 +1199,7 @@ ${rawQ}`
     <div style={{ minHeight: '100vh', background: bg, color: txt, fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif', padding: 16 }}>
       <style>{`
         * { box-sizing: border-box; margin: 0; padding: 0; }
-        .quiz-root { font-size: clamp(13px, 1.1vw, 17px); }
-        .quiz-root .choice-btn span:last-of-type,
-        .quiz-root .exp-text,
-        .quiz-root .bcard-text,
-        .quiz-root .q-text { font-size: inherit; }
+        body { font-size: clamp(18px, 1.6vw, 22px); }
         .choice-btn { transition: background 0.1s, border-color 0.1s; }
         .choice-btn:hover:not([disabled]) { background: rgba(74,222,128,0.04) !important; }
         .choice-btn.sel { background: rgba(74,222,128,0.08) !important; border-color: rgba(74,222,128,0.4) !important; }
@@ -1212,10 +1208,8 @@ ${rawQ}`
         .choice-btn.dimmed { opacity: 0.25; }
         input:focus, textarea:focus, select:focus { outline: none; border-color: rgba(74,222,128,0.45) !important; }
         ::-webkit-scrollbar { width: 4px; } ::-webkit-scrollbar-track { background: transparent; } ::-webkit-scrollbar-thumb { background: rgba(74,222,128,0.2); border-radius: 2px; }
-        .q-text { font-size: clamp(15px, 1.5vw, 18px) !important; }
-        .choice-btn { font-size: clamp(13px, 1.3vw, 16px) !important; }
-        .exp-text { font-size: clamp(13px, 1.2vw, 15px) !important; }
-        .bcard-text { font-size: clamp(13px, 1.2vw, 15px) !important; }
+        .q-text, .exp-text, .bcard-text { font-size: 1rem !important; }
+        .choice-btn { font-size: 1rem !important; }
         @media (max-width: 600px) {
           .choice-btn { padding: 12px 13px !important; }
         }
@@ -1587,7 +1581,7 @@ ${rawQ}`
                       ...(card.keywords ? [{ label: '🎯 Exam keywords', text: card.keywords, color: ylw }] : []),
                     ].filter(r => r.text).map((row, i, arr) => (
                       <div key={i} style={{ padding: '14px 18px', borderBottom: i < arr.length - 1 ? `1px solid rgba(255,255,255,0.05)` : 'none' }}>
-                        <div style={{ fontSize: 'clamp(9px, 0.9vw, 12px)', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.08em', color: row.color, marginBottom: 6 }}>{row.label}</div>
+                        <div style={{ fontSize: '0.65rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.08em', color: row.color, marginBottom: 6 }}>{row.label}</div>
                         <div className="exp-text" style={{ lineHeight: 1.65, color: '#ccc9be' }}><FormatText text={row.text} field={row.label === '🎯 Exam keywords' ? 'keywords' : row.label === 'The trap' ? 'trap' : 'text'} /></div>
                       </div>
                     ))}
@@ -1847,7 +1841,7 @@ ${rawQ}`
                     { label: 'Memorize',     text: draftCard.rule, color: ylw },
                   ].filter(r => r.text).map((row, i) => (
                     <div key={i} style={{ background: 'rgba(255,255,255,0.04)', borderRadius: 7, padding: '10px 12px' }}>
-                      <div style={{ fontSize: 'clamp(9px, 0.85vw, 12px)', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.07em', color: row.color, marginBottom: 5 }}>{row.label}</div>
+                      <div style={{ fontSize: '0.65rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.07em', color: row.color, marginBottom: 5 }}>{row.label}</div>
                       <div style={{ fontSize: 'clamp(13px, 1.1vw, 16px)', lineHeight: 1.6, color: '#ccc9be' }}>{row.text}</div>
                     </div>
                   ))}
