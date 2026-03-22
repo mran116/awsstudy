@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef, useCallback } from "react";
+import React, { useState, useEffect, useRef, useCallback } from "react";
 
 // ─── Mode detection ───────────────────────────────────────────────────────────
 // Vite's define option injects __VERCEL_MODE__ = true at build time.
@@ -618,7 +618,6 @@ function FormatQuestion({ text, txt, txt2, ylw }) {
   if (!text) return null;
 
   // Split scenario from closing question sentence (no lookbehind - iOS compatible)
-  const qStarters = /(?:Which |What |How |Where |When |Select |In this scenario|In S3 |In Kinesis|In EBS |In Route 53|In Elastic|In the event)/;
   let splitIdx = -1;
   const qStarterRx = /(?:Which of the following|Which solution|Which combination|Which type|Which AWS|Which service|Which option|Which step|Which statement|Which action|Which approach|Which set|Which record|Which of the below|What should|What is |What would|What does|What happens|What method|How should|How can|How will|How do |Where can|Where does|Where do |When the |In this scenario|In S3 |In Kinesis|In EBS |In Route 53|In Elastic|In the event|Which |What |How |Where |When |Select )/g;
   let m;
@@ -663,7 +662,7 @@ function FormatQuestion({ text, txt, txt2, ylw }) {
 
 // ─── Missed / flagged card (expandable) ──────────────────────────────────────
 function MissedCard({ card, bg2, bg3, bdr, txt, txt2, txt3, grn, red, ylw, pur, isLast }) {
-  const [open, setOpen] = React.useState(false);
+  const [open, setOpen] = useState(false);
   const correctSet = new Set((card.correct || '').split(''));
   const combined = [card.answer, card.why].filter(Boolean).join(' ');
   return (
