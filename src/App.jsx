@@ -805,7 +805,7 @@ export default function AWSQuiz() {
     const saved = (() => { try { return JSON.parse(localStorage.getItem(LS_KEY)); } catch { return null; } })();
     // Use saved progress if it exists, otherwise seed from test history
     setProgress(saved && 'prog' in saved ? saved.prog : DEFAULT_PROGRESS);
-    setCards(DEFAULT_CARDS);
+    setCards(DEFAULT_CARDS.filter(Boolean));
     setLoading(false);
   }, []);
 
@@ -844,7 +844,7 @@ export default function AWSQuiz() {
     if (!user) { setLoading(false); return; }
     setLoading(true);
     loadUserData(user.id).then(data => {
-      setCards(data?.cards?.length ? data.cards : DEFAULT_CARDS);
+      setCards(data?.cards?.length ? data.cards.filter(Boolean) : DEFAULT_CARDS.filter(Boolean));
       // Seed from test history if no saved progress
       setProgress(data && 'prog' in data ? data.prog : DEFAULT_PROGRESS);
       setLoading(false);
@@ -1111,7 +1111,7 @@ ${rawQ}`
     }
     // Clear both progress AND saved cards so DEFAULT_CARDS is used on next load
     await saveProg({});
-    await saveCards(DEFAULT_CARDS);
+    await saveCards(DEFAULT_CARDS.filter(Boolean));
     setSyncMsg('Progress reset ✓'); setTimeout(() => setSyncMsg(''), 2000);
   };
 
