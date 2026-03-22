@@ -679,7 +679,7 @@ function MissedCard({ card, bg2, bg3, bdr, txt, txt2, txt3, grn, red, ylw, pur, 
             return (
               <div key={letter} style={{ display: 'flex', gap: 8, padding: '5px 0', borderBottom: `1px solid rgba(255,255,255,0.04)`, alignItems: 'flex-start' }}>
                 <span style={{ fontSize: 11, fontWeight: 700, color: isC ? grn : txt3, minWidth: 16, marginTop: 1 }}>{letter}</span>
-                <span style={{ fontSize: 12, color: isC ? grn : txt2, lineHeight: 1.5 }}>{text}</span>
+                <span style={{ fontSize: 'clamp(12px, 1.0vw, 15px)', color: isC ? grn : txt2, lineHeight: 1.5 }}>{text}</span>
               </div>
             );
           })}
@@ -714,7 +714,7 @@ function BrowseCard({ card, hits, onDelete, onReset }) {
         onClick={() => setOpen(o => !o)}
       >
         <Badge cat={card.category} />
-        <span style={{ fontSize: 13, color: '#ccc9be', flex: 1, lineHeight: 1.4, minWidth: 100 }}>
+        <span style={{ fontSize: 'clamp(13px, 1.1vw, 16px)', color: '#ccc9be', flex: 1, lineHeight: 1.4, minWidth: 100 }}>
           {card.question?.length > 90 ? card.question.slice(0, 90) + '…' : card.question}
         </span>
         <div style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
@@ -1189,6 +1189,11 @@ ${rawQ}`
     <div style={{ minHeight: '100vh', background: bg, color: txt, fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif', padding: 16 }}>
       <style>{`
         * { box-sizing: border-box; margin: 0; padding: 0; }
+        .quiz-root { font-size: clamp(13px, 1.1vw, 17px); }
+        .quiz-root .choice-btn span:last-of-type,
+        .quiz-root .exp-text,
+        .quiz-root .bcard-text,
+        .quiz-root .q-text { font-size: inherit; }
         .choice-btn { transition: background 0.1s, border-color 0.1s; }
         .choice-btn:hover:not([disabled]) { background: rgba(74,222,128,0.04) !important; }
         .choice-btn.sel { background: rgba(74,222,128,0.08) !important; border-color: rgba(74,222,128,0.4) !important; }
@@ -1206,7 +1211,7 @@ ${rawQ}`
         }
       `}</style>
 
-      <div style={{ maxWidth: 'min(92vw, 1100px)', margin: '0 auto' }}>
+      <div className="quiz-root" style={{ maxWidth: 'min(92vw, 1100px)', margin: '0 auto' }}>
 
         {/* ── Header ── */}
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '1.25rem', flexWrap: 'wrap', gap: 8 }}>
@@ -1268,7 +1273,7 @@ ${rawQ}`
             const active = (t === 'Quiz' && view !== 'browse' && view !== 'tips') || (t === 'Browse' && view === 'browse') || (t === 'Tips' && view === 'tips');
             return (
               <button key={t} onClick={() => setView(t === 'Browse' ? 'browse' : t === 'Tips' ? 'tips' : 'home')}
-                style={{ padding: '8px 18px', fontSize: 13, border: 'none', background: 'transparent', cursor: 'pointer', fontFamily: 'inherit', color: active ? txt : txt2, borderBottom: `2px solid ${active ? grn : 'transparent'}`, marginBottom: -1, transition: 'color 0.15s' }}>
+                style={{ padding: '8px 18px', fontSize: 'clamp(13px, 1.1vw, 16px)', border: 'none', background: 'transparent', cursor: 'pointer', fontFamily: 'inherit', color: active ? txt : txt2, borderBottom: `2px solid ${active ? grn : 'transparent'}`, marginBottom: -1, transition: 'color 0.15s' }}>
                 {t}{t === 'Tips' ? ' 🎯' : ''}
               </button>
             );
@@ -1435,7 +1440,7 @@ ${rawQ}`
               <div style={{ display: 'flex', gap: 8, justifyContent: 'center', flexWrap: 'wrap' }}>
                 <button disabled={catWeakCnt === 0}
                   onClick={() => startSession('weak')}
-                  style={{ padding: '9px 18px', fontSize: 13, fontWeight: 600, background: grn, color: '#0a1f0f', border: 'none', borderRadius: 7, cursor: catWeakCnt === 0 ? 'not-allowed' : 'pointer', opacity: catWeakCnt === 0 ? 0.4 : 1 }}>
+                  style={{ padding: '9px 18px', fontSize: 'clamp(13px, 1.1vw, 16px)', fontWeight: 600, background: grn, color: '#0a1f0f', border: 'none', borderRadius: 7, cursor: catWeakCnt === 0 ? 'not-allowed' : 'pointer', opacity: catWeakCnt === 0 ? 0.4 : 1 }}>
                   Study {catWeakCnt} weak
                 </button>
                 <button disabled={catUnseenCnt === 0}
@@ -1449,7 +1454,7 @@ ${rawQ}`
                   {catConfCnt} confident
                 </button>
                 <button disabled={catTotalCnt === 0} onClick={() => startSession('all')}
-                  style={{ padding: '9px 18px', fontSize: 13, border: `1px solid ${bdr}`, borderRadius: 7, background: 'transparent', color: txt, cursor: 'pointer' }}>
+                  style={{ padding: '9px 18px', fontSize: 'clamp(13px, 1.1vw, 16px)', border: `1px solid ${bdr}`, borderRadius: 7, background: 'transparent', color: txt, cursor: 'pointer' }}>
                   All {catTotalCnt}
                 </button>
               </div>
@@ -1541,7 +1546,7 @@ ${rawQ}`
                         <button key={letter} className={cls}
                           onClick={() => handleSelect(letter)}
                           disabled={answered && !isMulti}
-                          style={{ display: 'flex', alignItems: 'flex-start', gap: 10, padding: '10px 12px', border: `1px solid ${bdr}`, borderRadius: 7, cursor: answered ? 'default' : 'pointer', fontSize: 13, color: txt, lineHeight: 1.55, textAlign: 'left', background: 'transparent', fontFamily: 'inherit', width: '100%' }}>
+                          style={{ display: 'flex', alignItems: 'flex-start', gap: 10, padding: '10px 12px', border: `1px solid ${bdr}`, borderRadius: 7, cursor: answered ? 'default' : 'pointer', fontSize: 'clamp(13px, 1.1vw, 16px)', color: txt, lineHeight: 1.55, textAlign: 'left', background: 'transparent', fontFamily: 'inherit', width: '100%' }}>
                           <span style={{ minWidth: 18, fontSize: 12, fontWeight: 700, color: answered ? (isC ? grn : isS ? red : txt3) : txt3, marginTop: 1 }}>{letter}</span>
                           <span style={{ flex: 1 }}>{text}</span>
                           {!answered && <span style={{ fontSize: 10, color: 'rgba(255,255,255,0.2)', alignSelf: 'center', flexShrink: 0 }}>{chIdx + 1}</span>}
@@ -1555,7 +1560,7 @@ ${rawQ}`
                 {isMulti && !answered && sel.length > 0 && (
                   <div style={{ padding: '0 18px 14px', display: 'flex', gap: 8, alignItems: 'center' }}>
                     <button onClick={() => doSubmit(sel)}
-                      style={{ flex: 1, padding: '9px', fontSize: 13, fontWeight: 600, background: grn, color: '#0a1f0f', border: 'none', borderRadius: 7, cursor: 'pointer' }}>
+                      style={{ flex: 1, padding: '9px', fontSize: 'clamp(13px, 1.1vw, 16px)', fontWeight: 600, background: grn, color: '#0a1f0f', border: 'none', borderRadius: 7, cursor: 'pointer' }}>
                       Submit answer
                     </button>
                     <span style={{ fontSize: 11, color: txt3, opacity: 0.6, whiteSpace: 'nowrap' }}>or Enter</span>
@@ -1603,7 +1608,7 @@ ${rawQ}`
                     <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
                       <span style={{ fontSize: 10, color: txt3, opacity: 0.6 }}>Enter →</span>
                       <button onClick={nextCard}
-                        style={{ padding: '8px 20px', fontSize: 13, fontWeight: 600, background: grn, color: '#0a1f0f', border: 'none', borderRadius: 7, cursor: 'pointer' }}>
+                        style={{ padding: '8px 20px', fontSize: 'clamp(13px, 1.1vw, 16px)', fontWeight: 600, background: grn, color: '#0a1f0f', border: 'none', borderRadius: 7, cursor: 'pointer' }}>
                         {qIdx + 1 >= queue.length ? 'Finish' : 'Next →'}
                       </button>
                     </div>
@@ -1732,22 +1737,22 @@ ${rawQ}`
               <div style={{ display: 'flex', gap: 10, justifyContent: 'center', flexWrap: 'wrap' }}>
                 {!examSim && (
                   <button onClick={() => startSession('weak')} disabled={catWeakCnt === 0}
-                    style={{ padding: '9px 20px', fontSize: 13, fontWeight: 600, background: grn, color: '#0a1f0f', border: 'none', borderRadius: 7, cursor: catWeakCnt === 0 ? 'not-allowed' : 'pointer', opacity: catWeakCnt === 0 ? 0.4 : 1 }}>
+                    style={{ padding: '9px 20px', fontSize: 'clamp(13px, 1.1vw, 16px)', fontWeight: 600, background: grn, color: '#0a1f0f', border: 'none', borderRadius: 7, cursor: catWeakCnt === 0 ? 'not-allowed' : 'pointer', opacity: catWeakCnt === 0 ? 0.4 : 1 }}>
                     Study {catWeakCnt} weak cards
                   </button>
                 )}
                 <button onClick={startExam}
-                  style={{ padding: '9px 20px', fontSize: 13, fontWeight: 600, background: 'rgba(251,191,36,0.15)', color: ylw, border: '1px solid rgba(251,191,36,0.35)', borderRadius: 7, cursor: 'pointer' }}>
+                  style={{ padding: '9px 20px', fontSize: 'clamp(13px, 1.1vw, 16px)', fontWeight: 600, background: 'rgba(251,191,36,0.15)', color: ylw, border: '1px solid rgba(251,191,36,0.35)', borderRadius: 7, cursor: 'pointer' }}>
                   New exam sim
                 </button>
                 {!examSim && (
                   <button onClick={() => startSession('all')}
-                    style={{ padding: '9px 20px', fontSize: 13, border: `1px solid ${bdr}`, borderRadius: 7, background: 'transparent', color: txt, cursor: 'pointer' }}>
+                    style={{ padding: '9px 20px', fontSize: 'clamp(13px, 1.1vw, 16px)', border: `1px solid ${bdr}`, borderRadius: 7, background: 'transparent', color: txt, cursor: 'pointer' }}>
                     Study all
                   </button>
                 )}
                 <button onClick={() => setView('home')}
-                  style={{ padding: '9px 20px', fontSize: 13, border: `1px solid ${bdr}`, borderRadius: 7, background: 'transparent', color: txt, cursor: 'pointer' }}>
+                  style={{ padding: '9px 20px', fontSize: 'clamp(13px, 1.1vw, 16px)', border: `1px solid ${bdr}`, borderRadius: 7, background: 'transparent', color: txt, cursor: 'pointer' }}>
                   Home
                 </button>
               </div>
@@ -1760,11 +1765,11 @@ ${rawQ}`
           <div>
             <div style={{ display: 'flex', gap: 8, marginBottom: 10, flexWrap: 'wrap', alignItems: 'center' }}>
               <input
-                style={{ flex: 1, minWidth: 160, padding: '7px 12px', fontSize: 13, border: `1px solid ${bdr}`, borderRadius: 7, background: 'rgba(255,255,255,0.04)', color: txt, fontFamily: 'inherit' }}
+                style={{ flex: 1, minWidth: 160, padding: '7px 12px', fontSize: 'clamp(13px, 1.1vw, 16px)', border: `1px solid ${bdr}`, borderRadius: 7, background: 'rgba(255,255,255,0.04)', color: txt, fontFamily: 'inherit' }}
                 placeholder="Search cards…" value={search} onChange={e => setSearch(e.target.value)}
               />
               <button onClick={() => { setRawQ(''); setAiStatus('idle'); setDraftCard(null); setAddOpen(true); }}
-                style={{ padding: '8px 16px', fontSize: 13, fontWeight: 600, background: grn, color: '#0a1f0f', border: 'none', borderRadius: 7, cursor: 'pointer', whiteSpace: 'nowrap' }}>
+                style={{ padding: '8px 16px', fontSize: 'clamp(13px, 1.1vw, 16px)', fontWeight: 600, background: grn, color: '#0a1f0f', border: 'none', borderRadius: 7, cursor: 'pointer', whiteSpace: 'nowrap' }}>
                 + Add card
               </button>
             </div>
@@ -1805,16 +1810,16 @@ ${rawQ}`
                 </div>
                 <textarea
                   value={rawQ} onChange={e => setRawQ(e.target.value)}
-                  style={{ width: '100%', minHeight: 200, padding: '10px 12px', fontSize: 13, border: `1px solid ${bdr}`, borderRadius: 7, background: 'rgba(255,255,255,0.04)', color: txt, fontFamily: 'inherit', resize: 'vertical', lineHeight: 1.6 }}
+                  style={{ width: '100%', minHeight: 200, padding: '10px 12px', fontSize: 'clamp(13px, 1.1vw, 16px)', border: `1px solid ${bdr}`, borderRadius: 7, background: 'rgba(255,255,255,0.04)', color: txt, fontFamily: 'inherit', resize: 'vertical', lineHeight: 1.6 }}
                   placeholder="Paste the full question and all answer choices here…"
                 />
                 <div style={{ display: 'flex', gap: 8, justifyContent: 'flex-end', marginTop: 12 }}>
                   <button onClick={() => setAddOpen(false)}
-                    style={{ padding: '8px 16px', fontSize: 13, border: `1px solid ${bdr}`, borderRadius: 7, background: 'transparent', color: txt, cursor: 'pointer' }}>
+                    style={{ padding: '8px 16px', fontSize: 'clamp(13px, 1.1vw, 16px)', border: `1px solid ${bdr}`, borderRadius: 7, background: 'transparent', color: txt, cursor: 'pointer' }}>
                     Cancel
                   </button>
                   <button onClick={processQuestion} disabled={aiStatus === 'loading' || !rawQ.trim()}
-                    style={{ padding: '8px 18px', fontSize: 13, fontWeight: 600, background: grn, color: '#0a1f0f', border: 'none', borderRadius: 7, cursor: aiStatus === 'loading' ? 'not-allowed' : 'pointer', opacity: aiStatus === 'loading' || !rawQ.trim() ? 0.6 : 1 }}>
+                    style={{ padding: '8px 18px', fontSize: 'clamp(13px, 1.1vw, 16px)', fontWeight: 600, background: grn, color: '#0a1f0f', border: 'none', borderRadius: 7, cursor: aiStatus === 'loading' ? 'not-allowed' : 'pointer', opacity: aiStatus === 'loading' || !rawQ.trim() ? 0.6 : 1 }}>
                     {aiStatus === 'loading' ? 'Building card…' : '✦ Build with AI'}
                   </button>
                 </div>
@@ -1833,17 +1838,17 @@ ${rawQ}`
                   ].filter(r => r.text).map((row, i) => (
                     <div key={i} style={{ background: 'rgba(255,255,255,0.04)', borderRadius: 7, padding: '10px 12px' }}>
                       <div style={{ fontSize: 'clamp(9px, 0.85vw, 12px)', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.07em', color: row.color, marginBottom: 5 }}>{row.label}</div>
-                      <div style={{ fontSize: 13, lineHeight: 1.6, color: '#ccc9be' }}>{row.text}</div>
+                      <div style={{ fontSize: 'clamp(13px, 1.1vw, 16px)', lineHeight: 1.6, color: '#ccc9be' }}>{row.text}</div>
                     </div>
                   ))}
                 </div>
                 <div style={{ display: 'flex', gap: 8, justifyContent: 'flex-end', marginTop: 12 }}>
                   <button onClick={() => setAiStatus('idle')}
-                    style={{ padding: '8px 16px', fontSize: 13, border: `1px solid ${bdr}`, borderRadius: 7, background: 'transparent', color: txt, cursor: 'pointer' }}>
+                    style={{ padding: '8px 16px', fontSize: 'clamp(13px, 1.1vw, 16px)', border: `1px solid ${bdr}`, borderRadius: 7, background: 'transparent', color: txt, cursor: 'pointer' }}>
                     ← Redo
                   </button>
                   <button onClick={saveCard}
-                    style={{ padding: '8px 18px', fontSize: 13, fontWeight: 600, background: grn, color: '#0a1f0f', border: 'none', borderRadius: 7, cursor: 'pointer' }}>
+                    style={{ padding: '8px 18px', fontSize: 'clamp(13px, 1.1vw, 16px)', fontWeight: 600, background: grn, color: '#0a1f0f', border: 'none', borderRadius: 7, cursor: 'pointer' }}>
                     Save card
                   </button>
                 </div>
@@ -1863,14 +1868,14 @@ ${rawQ}`
           );
           const Row = ({ kw, ans }) => (
             <div style={{ display: 'flex', gap: 10, padding: '7px 0', borderBottom: `1px solid rgba(255,255,255,0.04)`, alignItems: 'flex-start' }}>
-              <div style={{ minWidth: 200, fontSize: 12, color: '#fbbf24', fontWeight: 600, lineHeight: 1.5, flexShrink: 0 }}>{kw}</div>
-              <div style={{ fontSize: 12, color: '#c8c6bc', lineHeight: 1.5 }}>{ans}</div>
+              <div style={{ minWidth: 200, fontSize: 'clamp(12px, 1.0vw, 15px)', color: '#fbbf24', fontWeight: 600, lineHeight: 1.5, flexShrink: 0 }}>{kw}</div>
+              <div style={{ fontSize: 'clamp(12px, 1.0vw, 15px)', color: '#c8c6bc', lineHeight: 1.5 }}>{ans}</div>
             </div>
           );
           const Pair = ({ a, b }) => (
             <div style={{ display: 'flex', gap: 8, marginBottom: 7, alignItems: 'flex-start' }}>
               <div style={{ minWidth: 6, height: 6, borderRadius: '50%', background: red, marginTop: 5, flexShrink: 0 }} />
-              <div style={{ fontSize: 12, color: '#c8c6bc', lineHeight: 1.55 }}><span style={{ color: '#fb923c', fontWeight: 600 }}>{a}</span> {b}</div>
+              <div style={{ fontSize: 'clamp(12px, 1.0vw, 15px)', color: '#c8c6bc', lineHeight: 1.55 }}><span style={{ color: '#fb923c', fontWeight: 600 }}>{a}</span> {b}</div>
             </div>
           );
           return (
@@ -2190,7 +2195,7 @@ ${rawQ}`
 
               <div style={{ textAlign: 'center', padding: '1rem 0' }}>
                 <button onClick={() => setView('home')}
-                  style={{ padding: '10px 24px', fontSize: 13, fontWeight: 600, background: grn, color: '#0a1f0f', border: 'none', borderRadius: 7, cursor: 'pointer' }}>
+                  style={{ padding: '10px 24px', fontSize: 'clamp(13px, 1.1vw, 16px)', fontWeight: 600, background: grn, color: '#0a1f0f', border: 'none', borderRadius: 7, cursor: 'pointer' }}>
                   Back to the Questions →
                 </button>
               </div>
