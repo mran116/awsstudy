@@ -1203,9 +1203,15 @@ ${rawQ}`
           .exp-text { font-size: 15px !important; }
           .bcard-text { font-size: 15px !important; }
         }
+        @media (min-width: 860px) {
+          .q-text { font-size: 16px !important; }
+          .choice-btn { font-size: 15px !important; }
+          .exp-text { font-size: 14px !important; }
+          .bcard-text { font-size: 14px !important; }
+        }
       `}</style>
 
-      <div style={{ maxWidth: 680, margin: '0 auto' }}>
+      <div style={{ maxWidth: 860, margin: '0 auto' }}>
 
         {/* ── Header ── */}
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '1.25rem', flexWrap: 'wrap', gap: 8 }}>
