@@ -587,7 +587,7 @@ function FormatText({ text, field }) {
 
   // Answer / Why: break into spaced paragraphs when text is long
   if (text.length < 280) return <span>{text}</span>;
-  const sentences = text.split(/(?<=[.!?])\s+/).filter(Boolean);
+  const sentences = text.match(/[^.!?]+[.!?]+\s*/g) || [text];
   if (sentences.length < 3) return <span>{text}</span>;
 
   // Group into ~2 sentence paragraphs
@@ -617,13 +617,20 @@ function FormatText({ text, field }) {
 function FormatQuestion({ text, txt, txt2, ylw }) {
   if (!text) return null;
 
-  // Split scenario context from the closing question sentence
-  const splitRx = /(?<=[.!?"'\u200b])\s*(?=Which |What |How |Where |When |Select )|(?<=[a-z0-9>\]\}])\s*(?=Which of the following|What should|What is |What would|What does|What happens|What method|How should|How can|How will|How do |Which solution|Which combination|Which type|Which AWS|Which service|Which option|Which step|Which statement|Which action|Which approach|Which set|Which record|Which of the below|Where can|Where does|Where do |When the |In this scenario|In S3 |In Kinesis|In EBS |In Route 53|In Elastic|In the event)/;
-
-  const parts = text.split(splitRx).filter(Boolean);
-  const hasScenario = parts.length >= 2;
-  const scenario  = hasScenario ? parts.slice(0, -1).join(' ').trim() : null;
-  const question  = hasScenario ? parts[parts.length - 1].trim() : text;
+  // Split scenario from closing question sentence (no lookbehind - iOS compatible)
+  const qStarters = /(?:Which |What |How |Where |When |Select |In this scenario|In S3 |In Kinesis|In EBS |In Route 53|In Elastic|In the event)/;
+  let splitIdx = -1;
+  const qStarterRx = /(?:Which of the following|Which solution|Which combination|Which type|Which AWS|Which service|Which option|Which step|Which statement|Which action|Which approach|Which set|Which record|Which of the below|What should|What is |What would|What does|What happens|What method|How should|How can|How will|How do |Where can|Where does|Where do |When the |In this scenario|In S3 |In Kinesis|In EBS |In Route 53|In Elastic|In the event|Which |What |How |Where |When |Select )/g;
+  let m;
+  while ((m = qStarterRx.exec(text)) !== null) {
+    const before = text[m.index - 1];
+    if (before === '.' || before === '!' || before === '?' || before === '"' || before === "'" || before === ' ' || before === ']' || before === '}' || /[a-z0-9]/.test(before || '')) {
+      splitIdx = m.index;
+    }
+  }
+  const hasScenario = splitIdx > 0;
+  const scenario  = hasScenario ? text.slice(0, splitIdx).trim() : null;
+  const question  = hasScenario ? text.slice(splitIdx).trim() : text;
 
   // Detect "Select TWO/THREE" instruction
   const selectMatch = question.match(/\(Select (TWO|THREE|TWO\.|THREE\.)\)/i);
