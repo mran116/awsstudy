@@ -1109,7 +1109,9 @@ ${rawQ}`
     if (CLAUDE_MODE) {
       try { localStorage.removeItem(LS_KEY); } catch {}
     }
+    // Clear both progress AND saved cards so DEFAULT_CARDS is used on next load
     await saveProg({});
+    await saveCards(DEFAULT_CARDS);
     setSyncMsg('Progress reset ✓'); setTimeout(() => setSyncMsg(''), 2000);
   };
 
