@@ -1897,174 +1897,174 @@ ${rawQ}`
               <TSection title="Common Exam Scenarios — Tutorials Dojo Cheat Sheet">
                 <div style={{ fontSize: 11, color: txt3, marginBottom: '16px', lineHeight: 1.6 }}>Scenario → Solution pairs from the <em>Tutorials Dojo SAA-C03 Study Guide and Cheat Sheets</em> by Jon Bonso.</div>
 
-                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 0, borderRadius: 8, overflow: 'hidden', border: `1px solid rgba(255,255,255,0.08)`, marginBottom: '1rem' }}>
+                <div style={{ display: 'grid', gridTemplateColumns: '55% 45%', gap: 0, borderRadius: 8, overflow: 'hidden', border: `1px solid rgba(255,255,255,0.08)`, marginBottom: '1rem' }}>
                   <div style={{ gridColumn: '1 / -1', background: 'rgba(255,255,255,0.04)', padding: '7px 14px', fontSize: 11, fontWeight: 700, color: red, textTransform: 'uppercase', letterSpacing: '0.08em' }}>Domain 1: Design Secure Architectures</div>
-                  <div style={{ gridColumn: '1 / -1', display: 'grid', gridTemplateColumns: '1fr 1fr' }}>
+                  <div style={{ gridColumn: '1 / -1', display: 'grid', gridTemplateColumns: '55% 45%' }}>
                     <div style={{ padding: '6px 14px 4px', fontSize: 10, fontWeight: 700, color: txt3, textTransform: 'uppercase', letterSpacing: '0.07em', borderBottom: '1px solid rgba(255,255,255,0.06)', borderRight: '1px solid rgba(255,255,255,0.06)' }}>Scenario</div>
                     <div style={{ padding: '6px 14px 4px', fontSize: 10, fontWeight: 700, color: txt3, textTransform: 'uppercase', letterSpacing: '0.07em', borderBottom: '1px solid rgba(255,255,255,0.06)' }}>Solution</div>
                   </div>
-                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gridColumn: '1 / -1' }}>
+                  <div style={{ display: 'grid', gridTemplateColumns: '55% 45%', gridColumn: '1 / -1' }}>
                     <div style={{ padding: '9px 14px', fontSize: 12, color: txt, lineHeight: 1.55, borderBottom: '1px solid rgba(255,255,255,0.05)', borderRight: '1px solid rgba(255,255,255,0.06)' }}>Encrypt EBS volumes restored from unencrypted EBS snapshots</div>
                     <div style={{ padding: '9px 14px', fontSize: 12, color: grn, lineHeight: 1.55, borderBottom: '1px solid rgba(255,255,255,0.05)' }}>Copy the snapshot and enable encryption with a new symmetric KMS key while creating the EBS volume from the snapshot.</div>
                   </div>
-                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gridColumn: '1 / -1' }}>
+                  <div style={{ display: 'grid', gridTemplateColumns: '55% 45%', gridColumn: '1 / -1' }}>
                     <div style={{ padding: '9px 14px', fontSize: 12, color: txt, lineHeight: 1.55, borderBottom: '1px solid rgba(255,255,255,0.05)', borderRight: '1px solid rgba(255,255,255,0.06)' }}>Limit the maximum number of requests from a single IP address</div>
                     <div style={{ padding: '9px 14px', fontSize: 12, color: grn, lineHeight: 1.55, borderBottom: '1px solid rgba(255,255,255,0.05)' }}>Create a rate-based rule in AWS WAF and set the rate limit.</div>
                   </div>
-                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gridColumn: '1 / -1' }}>
+                  <div style={{ display: 'grid', gridTemplateColumns: '55% 45%', gridColumn: '1 / -1' }}>
                     <div style={{ padding: '9px 14px', fontSize: 12, color: txt, lineHeight: 1.55, borderBottom: '1px solid rgba(255,255,255,0.05)', borderRight: '1px solid rgba(255,255,255,0.06)' }}>Grant the bucket owner full access to all uploaded objects</div>
                     <div style={{ padding: '9px 14px', fontSize: 12, color: grn, lineHeight: 1.55, borderBottom: '1px solid rgba(255,255,255,0.05)' }}>Create a bucket policy that requires users to set the object's ACL to bucket-owner-full-control.</div>
                   </div>
-                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gridColumn: '1 / -1' }}>
+                  <div style={{ display: 'grid', gridTemplateColumns: '55% 45%', gridColumn: '1 / -1' }}>
                     <div style={{ padding: '9px 14px', fontSize: 12, color: txt, lineHeight: 1.55, borderBottom: '1px solid rgba(255,255,255,0.05)', borderRight: '1px solid rgba(255,255,255,0.06)' }}>Protect S3 objects from accidental deletion or overwrite</div>
                     <div style={{ padding: '9px 14px', fontSize: 12, color: grn, lineHeight: 1.55, borderBottom: '1px solid rgba(255,255,255,0.05)' }}>Enable versioning and MFA Delete.</div>
                   </div>
-                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gridColumn: '1 / -1' }}>
+                  <div style={{ display: 'grid', gridTemplateColumns: '55% 45%', gridColumn: '1 / -1' }}>
                     <div style={{ padding: '9px 14px', fontSize: 12, color: txt, lineHeight: 1.55, borderBottom: '1px solid rgba(255,255,255,0.05)', borderRight: '1px solid rgba(255,255,255,0.06)' }}>Access AWS resources using on-premises AD credentials</div>
                     <div style={{ padding: '9px 14px', fontSize: 12, color: grn, lineHeight: 1.55, borderBottom: '1px solid rgba(255,255,255,0.05)' }}>Set up SAML 2.0-Based Federation using Microsoft AD Federation Service (AD FS).</div>
                   </div>
-                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gridColumn: '1 / -1' }}>
+                  <div style={{ display: 'grid', gridTemplateColumns: '55% 45%', gridColumn: '1 / -1' }}>
                     <div style={{ padding: '9px 14px', fontSize: 12, color: txt, lineHeight: 1.55, borderBottom: '1px solid rgba(255,255,255,0.05)', borderRight: '1px solid rgba(255,255,255,0.06)' }}>Secure sensitive data stored in EBS volumes</div>
                     <div style={{ padding: '9px 14px', fontSize: 12, color: grn, lineHeight: 1.55, borderBottom: '1px solid rgba(255,255,255,0.05)' }}>Enable EBS Encryption.</div>
                   </div>
-                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gridColumn: '1 / -1' }}>
+                  <div style={{ display: 'grid', gridTemplateColumns: '55% 45%', gridColumn: '1 / -1' }}>
                     <div style={{ padding: '9px 14px', fontSize: 12, color: txt, lineHeight: 1.55, borderBottom: '1px solid rgba(255,255,255,0.05)', borderRight: '1px solid rgba(255,255,255,0.06)' }}>Ensure data-in-transit and data-at-rest in S3 is always encrypted</div>
                     <div style={{ padding: '9px 14px', fontSize: 12, color: grn, lineHeight: 1.55, borderBottom: '1px solid rgba(255,255,255,0.05)' }}>Enable S3 Server-Side Encryption (SSE-S3, SSE-KMS) or use Client-Side Encryption.</div>
                   </div>
-                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gridColumn: '1 / -1' }}>
+                  <div style={{ display: 'grid', gridTemplateColumns: '55% 45%', gridColumn: '1 / -1' }}>
                     <div style={{ padding: '9px 14px', fontSize: 12, color: txt, lineHeight: 1.55, borderBottom: '1px solid rgba(255,255,255,0.05)', borderRight: '1px solid rgba(255,255,255,0.06)' }}>Allow multiple domains to serve SSL traffic over the same IP</div>
                     <div style={{ padding: '9px 14px', fontSize: 12, color: grn, lineHeight: 1.55, borderBottom: '1px solid rgba(255,255,255,0.05)' }}>Use ACM to generate an SSL cert. Associate to CloudFront and enable Server Name Indication (SNI).</div>
                   </div>
-                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gridColumn: '1 / -1' }}>
+                  <div style={{ display: 'grid', gridTemplateColumns: '55% 45%', gridColumn: '1 / -1' }}>
                     <div style={{ padding: '9px 14px', fontSize: 12, color: txt, lineHeight: 1.55, borderBottom: '1px solid rgba(255,255,255,0.05)', borderRight: '1px solid rgba(255,255,255,0.06)' }}>Control S3 bucket access via gateway endpoint for trusted buckets</div>
                     <div style={{ padding: '9px 14px', fontSize: 12, color: grn, lineHeight: 1.55, borderBottom: '1px solid rgba(255,255,255,0.05)' }}>Create an endpoint policy for the trusted S3 buckets.</div>
                   </div>
-                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gridColumn: '1 / -1' }}>
+                  <div style={{ display: 'grid', gridTemplateColumns: '55% 45%', gridColumn: '1 / -1' }}>
                     <div style={{ padding: '9px 14px', fontSize: 12, color: txt, lineHeight: 1.55, borderRight: '1px solid rgba(255,255,255,0.06)' }}>Enforce compliance by tracking all AWS configuration changes</div>
                     <div style={{ padding: '9px 14px', fontSize: 12, color: grn, lineHeight: 1.55 }}>Set up a rule in AWS Config to identify compliant and non-compliant services.</div>
                   </div>
                 </div>
-                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 0, borderRadius: 8, overflow: 'hidden', border: `1px solid rgba(255,255,255,0.08)`, marginBottom: '1rem' }}>
+                <div style={{ display: 'grid', gridTemplateColumns: '55% 45%', gap: 0, borderRadius: 8, overflow: 'hidden', border: `1px solid rgba(255,255,255,0.08)`, marginBottom: '1rem' }}>
                   <div style={{ gridColumn: '1 / -1', background: 'rgba(255,255,255,0.04)', padding: '7px 14px', fontSize: 11, fontWeight: 700, color: '#fb923c', textTransform: 'uppercase', letterSpacing: '0.08em' }}>Domain 2: Design Resilient Architectures</div>
-                  <div style={{ gridColumn: '1 / -1', display: 'grid', gridTemplateColumns: '1fr 1fr' }}>
+                  <div style={{ gridColumn: '1 / -1', display: 'grid', gridTemplateColumns: '55% 45%' }}>
                     <div style={{ padding: '6px 14px 4px', fontSize: 10, fontWeight: 700, color: txt3, textTransform: 'uppercase', letterSpacing: '0.07em', borderBottom: '1px solid rgba(255,255,255,0.06)', borderRight: '1px solid rgba(255,255,255,0.06)' }}>Scenario</div>
                     <div style={{ padding: '6px 14px 4px', fontSize: 10, fontWeight: 700, color: txt3, textTransform: 'uppercase', letterSpacing: '0.07em', borderBottom: '1px solid rgba(255,255,255,0.06)' }}>Solution</div>
                   </div>
-                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gridColumn: '1 / -1' }}>
+                  <div style={{ display: 'grid', gridTemplateColumns: '55% 45%', gridColumn: '1 / -1' }}>
                     <div style={{ padding: '9px 14px', fontSize: 12, color: txt, lineHeight: 1.55, borderBottom: '1px solid rgba(255,255,255,0.05)', borderRight: '1px solid rgba(255,255,255,0.06)' }}>Asynchronous data replication to another RDS DB in another Region</div>
                     <div style={{ padding: '9px 14px', fontSize: 12, color: grn, lineHeight: 1.55, borderBottom: '1px solid rgba(255,255,255,0.05)' }}>Create a Read Replica.</div>
                   </div>
-                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gridColumn: '1 / -1' }}>
+                  <div style={{ display: 'grid', gridTemplateColumns: '55% 45%', gridColumn: '1 / -1' }}>
                     <div style={{ padding: '9px 14px', fontSize: 12, color: txt, lineHeight: 1.55, borderBottom: '1px solid rgba(255,255,255,0.05)', borderRight: '1px solid rgba(255,255,255,0.06)' }}>Parallel file system for hot (frequently accessed) data</div>
                     <div style={{ padding: '9px 14px', fontSize: 12, color: grn, lineHeight: 1.55, borderBottom: '1px solid rgba(255,255,255,0.05)' }}>Amazon FSx for Lustre.</div>
                   </div>
-                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gridColumn: '1 / -1' }}>
+                  <div style={{ display: 'grid', gridTemplateColumns: '55% 45%', gridColumn: '1 / -1' }}>
                     <div style={{ padding: '9px 14px', fontSize: 12, color: txt, lineHeight: 1.55, borderBottom: '1px solid rgba(255,255,255,0.05)', borderRight: '1px solid rgba(255,255,255,0.06)' }}>Synchronous data replication across AZs with automatic failover in RDS</div>
                     <div style={{ padding: '9px 14px', fontSize: 12, color: grn, lineHeight: 1.55, borderBottom: '1px solid rgba(255,255,255,0.05)' }}>Enable Multi-AZ deployment in Amazon RDS.</div>
                   </div>
-                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gridColumn: '1 / -1' }}>
+                  <div style={{ display: 'grid', gridTemplateColumns: '55% 45%', gridColumn: '1 / -1' }}>
                     <div style={{ padding: '9px 14px', fontSize: 12, color: txt, lineHeight: 1.55, borderBottom: '1px solid rgba(255,255,255,0.05)', borderRight: '1px solid rgba(255,255,255,0.06)' }}>Storage service for cold (infrequently accessed) data</div>
                     <div style={{ padding: '9px 14px', fontSize: 12, color: grn, lineHeight: 1.55, borderBottom: '1px solid rgba(255,255,255,0.05)' }}>Amazon S3 Glacier Flexible Retrieval (formerly S3 Glacier).</div>
                   </div>
-                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gridColumn: '1 / -1' }}>
+                  <div style={{ display: 'grid', gridTemplateColumns: '55% 45%', gridColumn: '1 / -1' }}>
                     <div style={{ padding: '9px 14px', fontSize: 12, color: txt, lineHeight: 1.55, borderBottom: '1px solid rgba(255,255,255,0.05)', borderRight: '1px solid rgba(255,255,255,0.06)' }}>Relational DB disaster recovery — RPO 1 second, RTO less than 1 minute</div>
                     <div style={{ padding: '9px 14px', fontSize: 12, color: grn, lineHeight: 1.55, borderBottom: '1px solid rgba(255,255,255,0.05)' }}>Use Amazon Aurora Global Database.</div>
                   </div>
-                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gridColumn: '1 / -1' }}>
+                  <div style={{ display: 'grid', gridTemplateColumns: '55% 45%', gridColumn: '1 / -1' }}>
                     <div style={{ padding: '9px 14px', fontSize: 12, color: txt, lineHeight: 1.55, borderBottom: '1px solid rgba(255,255,255,0.05)', borderRight: '1px solid rgba(255,255,255,0.06)' }}>Monitor DB metrics and send email notifications on threshold breach</div>
                     <div style={{ padding: '9px 14px', fontSize: 12, color: grn, lineHeight: 1.55, borderBottom: '1px solid rgba(255,255,255,0.05)' }}>Create an SNS topic and add it to a CloudWatch alarm.</div>
                   </div>
-                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gridColumn: '1 / -1' }}>
+                  <div style={{ display: 'grid', gridTemplateColumns: '55% 45%', gridColumn: '1 / -1' }}>
                     <div style={{ padding: '9px 14px', fontSize: 12, color: txt, lineHeight: 1.55, borderBottom: '1px solid rgba(255,255,255,0.05)', borderRight: '1px solid rgba(255,255,255,0.06)' }}>DNS failover to a static website</div>
                     <div style={{ padding: '9px 14px', fontSize: 12, color: grn, lineHeight: 1.55, borderBottom: '1px solid rgba(255,255,255,0.05)' }}>Use Route 53 failover routing to a static S3 website bucket or CloudFront distribution.</div>
                   </div>
-                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gridColumn: '1 / -1' }}>
+                  <div style={{ display: 'grid', gridTemplateColumns: '55% 45%', gridColumn: '1 / -1' }}>
                     <div style={{ padding: '9px 14px', fontSize: 12, color: txt, lineHeight: 1.55, borderBottom: '1px solid rgba(255,255,255,0.05)', borderRight: '1px solid rgba(255,255,255,0.06)' }}>Automated backup for all EBS volumes</div>
                     <div style={{ padding: '9px 14px', fontSize: 12, color: grn, lineHeight: 1.55, borderBottom: '1px solid rgba(255,255,255,0.05)' }}>Use Amazon Data Lifecycle Manager (DLM) to automate EBS snapshot creation.</div>
                   </div>
-                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gridColumn: '1 / -1' }}>
+                  <div style={{ display: 'grid', gridTemplateColumns: '55% 45%', gridColumn: '1 / -1' }}>
                     <div style={{ padding: '9px 14px', fontSize: 12, color: txt, lineHeight: 1.55, borderRight: '1px solid rgba(255,255,255,0.06)' }}>Monitor available swap space of EC2 instances</div>
                     <div style={{ padding: '9px 14px', fontSize: 12, color: grn, lineHeight: 1.55 }}>Install the CloudWatch agent and monitor the SwapUtilization metric.</div>
                   </div>
                 </div>
-                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 0, borderRadius: 8, overflow: 'hidden', border: `1px solid rgba(255,255,255,0.08)`, marginBottom: '1rem' }}>
+                <div style={{ display: 'grid', gridTemplateColumns: '55% 45%', gap: 0, borderRadius: 8, overflow: 'hidden', border: `1px solid rgba(255,255,255,0.08)`, marginBottom: '1rem' }}>
                   <div style={{ gridColumn: '1 / -1', background: 'rgba(255,255,255,0.04)', padding: '7px 14px', fontSize: 11, fontWeight: 700, color: ylw, textTransform: 'uppercase', letterSpacing: '0.08em' }}>Domain 3: High-Performing Architectures</div>
-                  <div style={{ gridColumn: '1 / -1', display: 'grid', gridTemplateColumns: '1fr 1fr' }}>
+                  <div style={{ gridColumn: '1 / -1', display: 'grid', gridTemplateColumns: '55% 45%' }}>
                     <div style={{ padding: '6px 14px 4px', fontSize: 10, fontWeight: 700, color: txt3, textTransform: 'uppercase', letterSpacing: '0.07em', borderBottom: '1px solid rgba(255,255,255,0.06)', borderRight: '1px solid rgba(255,255,255,0.06)' }}>Scenario</div>
                     <div style={{ padding: '6px 14px 4px', fontSize: 10, fontWeight: 700, color: txt3, textTransform: 'uppercase', letterSpacing: '0.07em', borderBottom: '1px solid rgba(255,255,255,0.06)' }}>Solution</div>
                   </div>
-                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gridColumn: '1 / -1' }}>
+                  <div style={{ display: 'grid', gridTemplateColumns: '55% 45%', gridColumn: '1 / -1' }}>
                     <div style={{ padding: '9px 14px', fontSize: 12, color: txt, lineHeight: 1.55, borderBottom: '1px solid rgba(255,255,255,0.05)', borderRight: '1px solid rgba(255,255,255,0.06)' }}>Fanout messaging to multiple subscribers</div>
                     <div style={{ padding: '9px 14px', fontSize: 12, color: grn, lineHeight: 1.55, borderBottom: '1px solid rgba(255,255,255,0.05)' }}>Create an SNS topic with message filtering and configure multiple SQS queues to subscribe.</div>
                   </div>
-                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gridColumn: '1 / -1' }}>
+                  <div style={{ display: 'grid', gridTemplateColumns: '55% 45%', gridColumn: '1 / -1' }}>
                     <div style={{ padding: '9px 14px', fontSize: 12, color: txt, lineHeight: 1.55, borderBottom: '1px solid rgba(255,255,255,0.05)', borderRight: '1px solid rgba(255,255,255,0.06)' }}>Database with read replication latency of less than 1 second</div>
                     <div style={{ padding: '9px 14px', fontSize: 12, color: grn, lineHeight: 1.55, borderBottom: '1px solid rgba(255,255,255,0.05)' }}>Use Amazon Aurora with cross-region replicas.</div>
                   </div>
-                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gridColumn: '1 / -1' }}>
+                  <div style={{ display: 'grid', gridTemplateColumns: '55% 45%', gridColumn: '1 / -1' }}>
                     <div style={{ padding: '9px 14px', fontSize: 12, color: txt, lineHeight: 1.55, borderBottom: '1px solid rgba(255,255,255,0.05)', borderRight: '1px solid rgba(255,255,255,0.06)' }}>Load balancer using UDP protocol for game servers</div>
                     <div style={{ padding: '9px 14px', fontSize: 12, color: grn, lineHeight: 1.55, borderBottom: '1px solid rgba(255,255,255,0.05)' }}>Use Network Load Balancer (NLB) — supports TCP/UDP.</div>
                   </div>
-                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gridColumn: '1 / -1' }}>
+                  <div style={{ display: 'grid', gridTemplateColumns: '55% 45%', gridColumn: '1 / -1' }}>
                     <div style={{ padding: '9px 14px', fontSize: 12, color: txt, lineHeight: 1.55, borderBottom: '1px solid rgba(255,255,255,0.05)', borderRight: '1px solid rgba(255,255,255,0.06)' }}>Monitor memory and disk space utilization of EC2 instances</div>
                     <div style={{ padding: '9px 14px', fontSize: 12, color: grn, lineHeight: 1.55, borderBottom: '1px solid rgba(255,255,255,0.05)' }}>Install the Amazon CloudWatch agent on the instance.</div>
                   </div>
-                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gridColumn: '1 / -1' }}>
+                  <div style={{ display: 'grid', gridTemplateColumns: '55% 45%', gridColumn: '1 / -1' }}>
                     <div style={{ padding: '9px 14px', fontSize: 12, color: txt, lineHeight: 1.55, borderBottom: '1px solid rgba(255,255,255,0.05)', borderRight: '1px solid rgba(255,255,255,0.06)' }}>Retrieve a subset of data from a large CSV file in S3</div>
                     <div style={{ padding: '9px 14px', fontSize: 12, color: grn, lineHeight: 1.55, borderBottom: '1px solid rgba(255,255,255,0.05)' }}>Use Amazon Athena — query S3 directly using standard SQL.</div>
                   </div>
-                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gridColumn: '1 / -1' }}>
+                  <div style={{ display: 'grid', gridTemplateColumns: '55% 45%', gridColumn: '1 / -1' }}>
                     <div style={{ padding: '9px 14px', fontSize: 12, color: txt, lineHeight: 1.55, borderBottom: '1px solid rgba(255,255,255,0.05)', borderRight: '1px solid rgba(255,255,255,0.06)' }}>Upload a 1 TB file to S3</div>
                     <div style={{ padding: '9px 14px', fontSize: 12, color: grn, lineHeight: 1.55, borderBottom: '1px solid rgba(255,255,255,0.05)' }}>Use the Amazon S3 Multipart Upload API to upload large objects in parts.</div>
                   </div>
-                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gridColumn: '1 / -1' }}>
+                  <div style={{ display: 'grid', gridTemplateColumns: '55% 45%', gridColumn: '1 / -1' }}>
                     <div style={{ padding: '9px 14px', fontSize: 12, color: txt, lineHeight: 1.55, borderBottom: '1px solid rgba(255,255,255,0.05)', borderRight: '1px solid rgba(255,255,255,0.06)' }}>Reduce response times from milliseconds to microseconds</div>
                     <div style={{ padding: '9px 14px', fontSize: 12, color: grn, lineHeight: 1.55, borderBottom: '1px solid rgba(255,255,255,0.05)' }}>Use Amazon DynamoDB Accelerator (DAX).</div>
                   </div>
-                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gridColumn: '1 / -1' }}>
+                  <div style={{ display: 'grid', gridTemplateColumns: '55% 45%', gridColumn: '1 / -1' }}>
                     <div style={{ padding: '9px 14px', fontSize: 12, color: txt, lineHeight: 1.55, borderBottom: '1px solid rgba(255,255,255,0.05)', borderRight: '1px solid rgba(255,255,255,0.06)' }}>Retrieve instance ID, public keys, and public IP of an EC2 instance</div>
                     <div style={{ padding: '9px 14px', fontSize: 12, color: grn, lineHeight: 1.55, borderBottom: '1px solid rgba(255,255,255,0.05)' }}>Access http://169.254.169.254/latest/meta-data/ from within the instance.</div>
                   </div>
-                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gridColumn: '1 / -1' }}>
+                  <div style={{ display: 'grid', gridTemplateColumns: '55% 45%', gridColumn: '1 / -1' }}>
                     <div style={{ padding: '9px 14px', fontSize: 12, color: txt, lineHeight: 1.55, borderRight: '1px solid rgba(255,255,255,0.06)' }}>Route traffic to resources based on user location</div>
                     <div style={{ padding: '9px 14px', fontSize: 12, color: grn, lineHeight: 1.55 }}>Use Route 53 Geolocation Routing policy.</div>
                   </div>
                 </div>
-                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 0, borderRadius: 8, overflow: 'hidden', border: `1px solid rgba(255,255,255,0.08)`, marginBottom: '1rem' }}>
+                <div style={{ display: 'grid', gridTemplateColumns: '55% 45%', gap: 0, borderRadius: 8, overflow: 'hidden', border: `1px solid rgba(255,255,255,0.08)`, marginBottom: '1rem' }}>
                   <div style={{ gridColumn: '1 / -1', background: 'rgba(255,255,255,0.04)', padding: '7px 14px', fontSize: 11, fontWeight: 700, color: grn, textTransform: 'uppercase', letterSpacing: '0.08em' }}>Domain 4: Design Cost-Optimized Architectures</div>
-                  <div style={{ gridColumn: '1 / -1', display: 'grid', gridTemplateColumns: '1fr 1fr' }}>
+                  <div style={{ gridColumn: '1 / -1', display: 'grid', gridTemplateColumns: '55% 45%' }}>
                     <div style={{ padding: '6px 14px 4px', fontSize: 10, fontWeight: 700, color: txt3, textTransform: 'uppercase', letterSpacing: '0.07em', borderBottom: '1px solid rgba(255,255,255,0.06)', borderRight: '1px solid rgba(255,255,255,0.06)' }}>Scenario</div>
                     <div style={{ padding: '6px 14px 4px', fontSize: 10, fontWeight: 700, color: txt3, textTransform: 'uppercase', letterSpacing: '0.07em', borderBottom: '1px solid rgba(255,255,255,0.06)' }}>Solution</div>
                   </div>
-                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gridColumn: '1 / -1' }}>
+                  <div style={{ display: 'grid', gridTemplateColumns: '55% 45%', gridColumn: '1 / -1' }}>
                     <div style={{ padding: '9px 14px', fontSize: 12, color: txt, lineHeight: 1.55, borderBottom: '1px solid rgba(255,255,255,0.05)', borderRight: '1px solid rgba(255,255,255,0.06)' }}>Cost-effective solution for over-provisioning of resources</div>
                     <div style={{ padding: '9px 14px', fontSize: 12, color: grn, lineHeight: 1.55, borderBottom: '1px solid rgba(255,255,255,0.05)' }}>Configure target tracking scaling in an Auto Scaling Group (ASG).</div>
                   </div>
-                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gridColumn: '1 / -1' }}>
+                  <div style={{ display: 'grid', gridTemplateColumns: '55% 45%', gridColumn: '1 / -1' }}>
                     <div style={{ padding: '9px 14px', fontSize: 12, color: txt, lineHeight: 1.55, borderBottom: '1px solid rgba(255,255,255,0.05)', borderRight: '1px solid rgba(255,255,255,0.06)' }}>Tape backup data preserved for up to 10 years cost-effectively</div>
                     <div style={{ padding: '9px 14px', fontSize: 12, color: grn, lineHeight: 1.55, borderBottom: '1px solid rgba(255,255,255,0.05)' }}>Use AWS Storage Gateway to back up data directly to Amazon S3 Glacier Deep Archive.</div>
                   </div>
-                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gridColumn: '1 / -1' }}>
+                  <div style={{ display: 'grid', gridTemplateColumns: '55% 45%', gridColumn: '1 / -1' }}>
                     <div style={{ padding: '9px 14px', fontSize: 12, color: txt, lineHeight: 1.55, borderBottom: '1px solid rgba(255,255,255,0.05)', borderRight: '1px solid rgba(255,255,255,0.06)' }}>Accelerate transfer of historical records from on-premises to AWS</div>
                     <div style={{ padding: '9px 14px', fontSize: 12, color: grn, lineHeight: 1.55, borderBottom: '1px solid rgba(255,255,255,0.05)' }}>Use AWS DataSync and select Amazon S3 Glacier Deep Archive as the destination.</div>
                   </div>
-                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gridColumn: '1 / -1' }}>
+                  <div style={{ display: 'grid', gridTemplateColumns: '55% 45%', gridColumn: '1 / -1' }}>
                     <div style={{ padding: '9px 14px', fontSize: 12, color: txt, lineHeight: 1.55, borderBottom: '1px solid rgba(255,255,255,0.05)', borderRight: '1px solid rgba(255,255,255,0.06)' }}>Deliver static content and media files globally with low latency</div>
                     <div style={{ padding: '9px 14px', fontSize: 12, color: grn, lineHeight: 1.55, borderBottom: '1px solid rgba(255,255,255,0.05)' }}>Store files in Amazon S3 and create a CloudFront distribution with the S3 bucket as origin.</div>
                   </div>
-                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gridColumn: '1 / -1' }}>
+                  <div style={{ display: 'grid', gridTemplateColumns: '55% 45%', gridColumn: '1 / -1' }}>
                     <div style={{ padding: '9px 14px', fontSize: 12, color: txt, lineHeight: 1.55, borderBottom: '1px solid rgba(255,255,255,0.05)', borderRight: '1px solid rgba(255,255,255,0.06)' }}>EC2 app running continuously for 3 years with stable predictable CPU</div>
                     <div style={{ padding: '9px 14px', fontSize: 12, color: grn, lineHeight: 1.55, borderBottom: '1px solid rgba(255,255,255,0.05)' }}>Deploy to a Reserved Instance.</div>
                   </div>
-                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gridColumn: '1 / -1' }}>
+                  <div style={{ display: 'grid', gridTemplateColumns: '55% 45%', gridColumn: '1 / -1' }}>
                     <div style={{ padding: '9px 14px', fontSize: 12, color: txt, lineHeight: 1.55, borderBottom: '1px solid rgba(255,255,255,0.05)', borderRight: '1px solid rgba(255,255,255,0.06)' }}>Cost-effective storage for S3 objects accessed infrequently</div>
                     <div style={{ padding: '9px 14px', fontSize: 12, color: grn, lineHeight: 1.55, borderBottom: '1px solid rgba(255,255,255,0.05)' }}>Create an S3 lifecycle policy to move objects to Amazon S3 Standard-IA.</div>
                   </div>
-                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gridColumn: '1 / -1' }}>
+                  <div style={{ display: 'grid', gridTemplateColumns: '55% 45%', gridColumn: '1 / -1' }}>
                     <div style={{ padding: '9px 14px', fontSize: 12, color: txt, lineHeight: 1.55, borderBottom: '1px solid rgba(255,255,255,0.05)', borderRight: '1px solid rgba(255,255,255,0.06)' }}>Minimize data transfer costs between two EC2 instances</div>
                     <div style={{ padding: '9px 14px', fontSize: 12, color: grn, lineHeight: 1.55, borderBottom: '1px solid rgba(255,255,255,0.05)' }}>Deploy the EC2 instances in the same Region.</div>
                   </div>
-                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gridColumn: '1 / -1' }}>
+                  <div style={{ display: 'grid', gridTemplateColumns: '55% 45%', gridColumn: '1 / -1' }}>
                     <div style={{ padding: '9px 14px', fontSize: 12, color: txt, lineHeight: 1.55, borderRight: '1px solid rgba(255,255,255,0.06)' }}>Import SSL/TLS certificate of the application</div>
                     <div style={{ padding: '9px 14px', fontSize: 12, color: grn, lineHeight: 1.55 }}>Import the certificate into AWS Certificate Manager or upload it to AWS IAM.</div>
                   </div>
